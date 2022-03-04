@@ -23,8 +23,10 @@ console.log(data)
         {/* Below is a Terinary operator for the paragraph on the page to show when there is no data show "Not Rendering Correctly" but if it is, show the data ('') */}
         <p>{!data ? "Not Rendering Correctly" : ''}</p>
         
-        {/*  */}
+        {/* Taking the data that was requested by fetch, accessing the list element in the data json, then maping through the array values. Then using the data attached to Dailyforcast which is equal to the forecast prop in the FiveDayForecast component */}
         {data && data.list.map((dailyForecast) => {
+
+          // Returning the FiveDayForecast component prop data
          return <FiveDayForecast forecast={dailyForecast}/> 
         })}
       </header>
