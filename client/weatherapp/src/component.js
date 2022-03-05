@@ -9,7 +9,7 @@ const FiveDayForecast = ({forecast}) => {
 
             {/* Finding the weather icon within the api json data */}
             {forecast.weather.map((w) => { 
-                return <img src={`http://openweathermap.org/img/wn/${w.icon}@2x.png`} />
+                return <img src={`http://openweathermap.org/img/wn/${w.icon}@2x.png`} alt= " "/>
             })}
             {/* Accessing the tempurture, low and hi's and humidity within the api json data */}
             <h2>Current Temp: {forecast.main.temp}</h2>
